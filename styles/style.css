@@ -1,25 +1,33 @@
 .todos-header-text {
-    font-family: "Open Sans C", sans-serif;
+    font-family: 'Advent Pro', sans-serif;
+    max-width: 220px;
+    margin: 0 auto;
     font-style: normal;
     font-weight: 100;
     font-size: 100px;
     line-height: 100px;
     color: #e6e6e6;
+}
+
+.todos-list-tasks {
     margin: 0;
+    padding: 0;
 }
 
 .wrapper {
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .todos-header {
-    margin-top: 10vmin;
-    margin-bottom: 1vmin;
+    margin-top: 60px;
 }
 
 .todos-controls-button {
+    min-height: 25px;
+    min-width: 25px;
     height: 5vmin;
     width: 5vmin;
     background: url("../images/button.svg");
@@ -40,6 +48,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    min-width: 300px;
     width: 60vmin;
     background: #ffffff;
     box-shadow: 0 1px 1px 0 #e0e0e0;
@@ -72,6 +81,7 @@
 .todos-list-item-checkbox {
     opacity: 0;
     margin-right: -20px;
+    margin-left: 15px;
 }
 
 .todos-list-checkbox-view {
@@ -95,8 +105,12 @@
     width: 5vmin;
 }
 
-.todos-list-item-view:hover .todos-list-item-clear,
-.todos-list-item-text:focus-within .todos-list-item-clear {
+.todos-list-item-clear:focus {
+    opacity: 1;
+}
+
+.todos-list-item-view:hover,
+.todos-list-item-text:focus-within {
     opacity: 1;
 }
 
@@ -164,6 +178,7 @@
     align-items: center;
     margin: 5px 15px 5px 15px;
 }
+
 .todos-bottom-buttons-label {
     display: flex;
     padding: 0 10px 0 10px;
