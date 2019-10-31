@@ -1,41 +1,102 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-	<meta charset = "UTF-8">
-	<title>Todos</title>
+    <meta charset="UTF-8"/>
+    <title>Todos</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:100&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class = "todos">
-		<div class = "todos-header">
-			<img src = "images/header.png" alt = "Todos">
-		</div>
-		<div class = "todos-list">
-			<div class = "todos-list-item">
-				<input type = "checkbox">
-				HTML
-			</div>
-			<div class = "todos-list-item">
-				<input type = "checkbox">
-				CSS
-			</div>
-			<div class = "todos-list-item">
-				<input type = "checkbox">
-				JS
-			</div>
-			<div class = "todos-list-item">
-				<input type = "checkbox">
-				JS tools
-			</div>
-		</div>
-		<div class = "todos-bottom">
-			<div class = "todos-bottom-buttons">
-				3 items left 
-				<button class = "button-showme">All</button>
-				<button class = "button-showme">Active</button>
-				<button class = "button-showme">Completed</button>
-				<button class = "button-clear">Clear completed</button>
-			</div>
-		</div>
-	</div>
+<div class="wrapper">
+    <div class="todos">
+        <header class="todos-header">
+            <h1 class="todos-header-text">todos</h1>
+        </header>
+        <main class="todos-frame">
+            <section class="todos-controls">
+                <input type="button" class="todos-controls-button" aria-label="Select all"></input>
+                <input type="text" class="todos-controls-text" placeholder="Write something" aria-label="Add new"
+                       autofocus="autofocus"/>
+            </section>
+            <section class="todos-list">
+                <ul class="todos-list-tasks">
+                    <li class="todos-list-item">
+                        <div class="todos-list-item-view">
+                            <input type="checkbox" class="todos-list-item-checkbox" id="checkbox1">
+                            <label for="checkbox1" class="todos-list-item-label">
+                                <span class="todos-list-checkbox-view" aria-label="Task1">
+                                </span>
+                            </label>
+                            <span class="todos-list-item-text">WebStorm</span>
+                            <input type="button" class="todos-list-item-clear" aria-label="Delete"/>
+                        </div>
+                    </li>
+                    <li class="todos-list-item">
+                        <div class="todos-list-item-view">
+                            <input type="checkbox" class="todos-list-item-checkbox" id="checkbox2">
+                            <label for="checkbox2" class="todos-list-item-label">
+                                <span class="todos-list-checkbox-view" aria-label="Task1">
+                                </span>
+                            </label>
+                            <span class="todos-list-item-text">HTML</span>
+                            <input type="button" class="todos-list-item-clear" aria-label="Delete"/>
+                        </div>
+                    </li>
+                    <li class="todos-list-item">
+                        <div class="todos-list-item-view">
+                            <input type="checkbox" class="todos-list-item-checkbox" id="checkbox3">
+                            <label for="checkbox3" class="todos-list-item-label">
+                                <span class="todos-list-checkbox-view" aria-label="Task1">
+                                </span>
+                            </label>
+                            <span class="todos-list-item-text">JS Tools</span>
+                            <input type="button" class="todos-list-item-clear" aria-label="Delete"/>
+                        </div>
+                    </li>
+                    <li class="todos-list-item">
+                        <div class="todos-list-item-view">
+                            <input type="checkbox" class="todos-list-item-checkbox" id="checkbox4">
+                            <label for="checkbox4" class="todos-list-item-label">
+                                <span class="todos-list-checkbox-view" aria-label="Task1">
+                                </span>
+                            </label>
+                            <span class="todos-list-item-text">Java</span>
+                            <input type="button" class="todos-list-item-clear" aria-label="Delete"/>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="todos-bottom">
+                <div class="todos-bottom-text">
+                    <span class="todos-bottom-text-counter">3 items left</span>
+                </div>
+                <div class="todos-bottom-buttons">
+                    <label class="todos-bottom-buttons-label">
+                        <input class="todos-bottom-radiobutton" type="radio"
+                               name="group" value="all" checked="checked"/>
+                        <span class="todos-bottom-text" aria-label="Select all tasks">
+                            All
+                        </span>
+                    </label>
+                    <label class="todos-bottom-buttons-label">
+                        <input class="todos-bottom-radiobutton" type="radio"
+                               name="group" value="all" checked="checked"/>
+                        <span class="todos-bottom-text" aria-label="Select all tasks">
+                            Active
+                        </span>
+                    </label>
+                    <label class="todos-bottom-buttons-label">
+                        <input class="todos-bottom-radiobutton" type="radio"
+                               name="group" value="all" checked="checked"/>
+                        <span class="todos-bottom-text" aria-label="Select all tasks">
+                            Completed
+                        </span>
+                    </label>
+                    <button class="todos-bottom-button-clear">Clear completed</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,231 @@
+.todos-header-text {
+    font-family: 'Advent Pro', sans-serif;
+    max-width: 220px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    line-height: 100px;
+    color: #e6e6e6;
+}
+
+.todos-list-tasks {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todos-header {
+    margin-top: 60px;
+}
+
+.todos-controls-button {
+    min-height: 25px;
+    min-width: 25px;
+    height: 5vmin;
+    width: 5vmin;
+    background: url("../images/button.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    margin: 5px;
+}
+
+.todos-controls {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.todos-frame {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-width: 300px;
+    width: 60vmin;
+    background: #ffffff;
+    box-shadow: 0 1px 1px 0 #e0e0e0;
+}
+
+.todos-frame::after {
+    position: absolute;
+    top: 100%;
+    left: 0.5%;
+    content: "";
+    height: 5px;
+    width: 99%;
+    box-shadow: 0px 1px 1px #e0e0e0;
+}
+
+.todos-frame::before {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 1%;
+    content: "";
+    height: 5px;
+    width: 98%;
+    box-shadow: 0px 1px 1px #e0e0e0;
+}
+
+.todos-list-item {
+    list-style-type: none;
+}
+
+.todos-list-item-checkbox {
+    opacity: 0;
+    margin-right: -20px;
+    margin-left: 15px;
+}
+
+.todos-list-checkbox-view {
+    display: flex;
+    width: 37px;
+    height: 37px;
+    background: #ffffff;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+    margin: 10px 10px 15px 0px;
+    align-items: center;
+}
+
+.todos-list-item-clear {
+    opacity: 0;
+    background: url("../images/cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    height: 5vmin;
+    width: 5vmin;
+}
+
+.todos-list-item-clear:focus {
+    opacity: 1;
+}
+
+.todos-list-item-view:hover,
+.todos-list-item-text:focus-within {
+    opacity: 1;
+}
+
+.todos-list-item-checkbox:checked
++ .todos-list-item-label
+.todos-list-checkbox-view {
+    background-image: url("../images/checkbox.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    min-height: 15vmin;
+}
+
+.todos-list-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.todos-list-item-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos-list-item-view:hover,
+.todos-list-item-view:focus-within {
+    background: #f9f9f9;
+}
+
+.todos-controls-text {
+    flex-grow: 1;
+    border: none;
+    font-family: "Open Sans C", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    color: #808080;
+}
+
+
+.todos-list-item-text {
+    flex-grow: 1;
+    font-family: "Open Sans C", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    word-break: break-all;
+    padding: 10px 0px 10px 0px;
+}
+
+.todos-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todos-bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 15px 5px 15px;
+}
+
+.todos-bottom-buttons-label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+
+.todos-bottom-button-clear {
+    padding: 5px;
+    background: #ffffff;
+    border: none;
+    font-family: "Open Sans C", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    color: #808080;
+}
+
+.todos-bottom-radiobutton:checked + .todos-bottom-text {
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.todos-bottom-radiobutton:focus + .todos-bottom-text {
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.todos-bottom-text-counter {
+    margin: 10px 20px 10px 20px;
+    font-family: "Open Sans C", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    color: #808080;
+}
+
+.todos-bottom-text {
+    padding: 5px;
+    font-family: "Open Sans C", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #808080;
+}
+
+.todos-bottom-radiobutton {
+    opacity: 0;
+    position: absolute;
+    left: -999999px;
+}
